@@ -11,7 +11,7 @@ See what needs you, act on it in one click, and get a notification the moment so
 
 <br>
 
-[![Download for macOS](https://img.shields.io/badge/Download_for_macOS-F27BA8?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/ialhejaili/whisker/releases/download/v0.4.3/Whisker-0.4.3.dmg)
+[![Download for macOS](https://img.shields.io/badge/Download_for_macOS-F27BA8?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/ialhejaili/whisker/releases/download/v0.4.4/Whisker-0.4.4.dmg)
 
 ![Latest version](https://img.shields.io/github/v/release/ialhejaili/whisker?style=flat-square&label=version&color=3A1D2F)
 ![macOS 14 or newer](https://img.shields.io/badge/macOS-14%2B-3A1D2F?style=flat-square)
@@ -208,7 +208,7 @@ On the desk: <kbd>T</kbd> Today, <kbd>A</kbd> arrange tiles, <kbd>?</kbd> every 
 
 ### Install
 
-1. **[Download Whisker](https://github.com/ialhejaili/whisker/releases/download/v0.4.3/Whisker-0.4.3.dmg)**, open it, and drag Whisker into **Applications**.
+1. **[Download Whisker](https://github.com/ialhejaili/whisker/releases/download/v0.4.4/Whisker-0.4.4.dmg)**, open it, and drag Whisker into **Applications**.
 2. **Open Whisker.** Settings opens on first launch: pick a theme and your city.
 3. **Allow what you want.** macOS asks once each for Location, Calendar, Reminders and notifications.
 
