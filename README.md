@@ -50,6 +50,7 @@ approve a merge request or open a ticket without leaving the desk.
 - GitLab review inbox: approve, merge, reply
 - Plane tickets: create, move, comment
 - Create merge requests in one step
+- Notified when your MRs or tickets change
 - Your repo, branches and worktrees
 - Dev server, containers and checks
 
@@ -95,11 +96,18 @@ You choose which states those are in **Settings › Developer**, to match your t
 
 ## Widgets for your Mac's desktop
 
-Want just one or two? Whisker's widgets are in the macOS widget gallery too, so you can place them next to your own. Right-click the desktop, choose **Edit Widgets…** and search for Whisker.
+Want just one or two? Every Whisker tile is in the macOS widget gallery too, so you can place it next to your own. Right-click the desktop, choose **Edit Widgets…** and search for Whisker.
 
 ![Whisker widgets in the macOS widget gallery](screenshots/mac-widgets.png)
 
-**Up next**, **Prayer times**, **Needs you**, **Agenda**, **To-do**, **Plane tickets**, **Review inbox** and **Cat of the hour**, in the sizes macOS offers. They follow your theme, countdowns tick live, and a click opens the ticket, the merge request, the meeting or Whisker itself. Whisker needs to be running to keep them up to date.
+All 19 of them, in the sizes macOS offers: Up next, Agenda, Prayer times, Clock, Cat fact, To-do, Reminders, Habits, Focus timer, Sticky note, Needs you, Plane tickets, Review inbox, Repo, Dev stack, Cat of the hour, Batteries, This Mac and Quick links.
+
+- **They have the desk's buttons.** Tick to-dos and reminders, approve and merge MRs, retry pipelines, start a branch or an MR, fetch and pull, start your dev server, run checks, count habits, run the focus timer. A short note under the widget says how it went.
+- **Anything that needs typing opens just that panel.** A comment, a reply, a new ticket or to-do floats over your windows with everything the desk has, and goes away when you're done.
+- **Click a widget's header to see everything.** The whole desk comes up, where the tile shows all of its items.
+- **They fit in.** Your theme, every size, and macOS's tinted desktop style.
+
+Whisker needs to be running to keep them up to date.
 
 <br>
 
@@ -125,8 +133,8 @@ Turn widgets on or off and reorder them in **Settings › Widgets**, or drag the
 
 | | |
 |---|---|
-| **Review inbox** (GitLab) | The merge requests that need you, most urgent first: failing pipelines and conflicts on yours, replies you owe, reviews you've been asked for. Approve, merge now or when the pipeline passes, retry a pipeline, read the job log and reply to threads. |
-| **Plane tickets** | Your work items by Doing, Waiting, Todo and Done, with due dates, cycles and priority. Create tickets, change state or priority, comment, and see each ticket's branch and merge request. |
+| **Review inbox** (GitLab) | The merge requests that need you, most urgent first: failing pipelines and conflicts on yours, replies you owe, reviews you've been asked for. Approve, merge now or when the pipeline passes, retry a pipeline, read the job log and reply to threads. You get a notification when one of your MRs fails or passes its pipeline, is approved, becomes ready to merge, gets conflicts, a new comment or an unresolved thread, or is merged or closed by someone else. Click it to open the MR. |
+| **Plane tickets** | Your work items by Doing, Waiting, Todo and Done, with due dates, cycles and priority. Create tickets, change state or priority, comment, and see each ticket's branch and merge request. You get a notification when someone else moves one of your tickets, and when anyone mentions you on any ticket, in a comment or the description. |
 
 <table>
 <tr>
@@ -210,23 +218,78 @@ Also available: **Clock & greeting**, **Focus timer**, **Habits**, **Sticky note
 
 Then turn on **Open at Login** in the menu-bar cat, and your desk is ready every morning.
 
-<details>
-<summary><b>Setting up the developer widgets</b></summary>
+The developer widgets stay out of the way until you connect them. See [Connect GitLab and Plane](#connect-gitlab-and-plane).
 
 <br>
 
-They stay out of the way until you fill in **Settings › Developer**.
+## Connect GitLab and Plane
 
-| Widget | What it needs |
-|---|---|
-| Review inbox | The GitLab CLI, signed in: `brew install glab && glab auth login` |
-| Plane tickets | Your Plane address, workspace and a personal access token |
-| Repo | The folder of your git checkout |
-| Dev stack | Your dev server command and URL; Docker for containers |
+Everything below is in **Settings › Developer**. Open Settings from the menu-bar cat. Whisker talks to your own servers with your own sign-in; nothing goes through anyone else.
 
-The data scripts use `python3` from Apple's Command Line Tools. macOS offers to install them the first time, if needed.
+### What you need first
 
-</details>
+- **Command Line Tools.** Whisker's data scripts use Apple's `python3` and `git`. If you've never installed them, run `xcode-select --install` in Terminal (macOS also offers this the first time it's needed).
+- **Homebrew**, to install the GitLab CLI. See [brew.sh](https://brew.sh).
+
+### GitLab (Review inbox, merge requests)
+
+Whisker uses the official GitLab CLI, `glab`, and its sign-in. Whisker never sees or stores your GitLab token.
+
+1. **Install the CLI.** In Terminal:
+
+   ```sh
+   brew install glab
+   ```
+
+2. **Sign in.**
+   - On gitlab.com: run `glab auth login`, choose **gitlab.com**, then **Web** to sign in with your browser.
+   - On your company's GitLab: first make a token. In GitLab, open your avatar › **Edit profile** › **Access tokens** (called **Personal access tokens** in newer GitLab) › **Add new token**, give it the **api** and **write_repository** scopes and an expiry date, and copy it. Then run the command below with your GitLab's address and paste the token when asked:
+
+     ```sh
+     glab auth login --hostname gitlab.example.com
+     ```
+
+3. **Check it.** `glab auth status` should say you're logged in to that host.
+4. **Fill in Whisker.** In **Settings › Developer › GitLab**:
+   - **Host**: your GitLab's address without `https://`, for example `gitlab.com` or `gitlab.example.com`.
+   - **Username**: your GitLab username (the one after `@`). Whisker uses it to tell your MRs and comments from other people's.
+5. **Choose your notifications.** Pipeline results, Approvals, Comments, Unresolved threads, and Merged, closed, conflicts are all on to start with. Turn off any you don't want.
+
+Within two minutes the Review inbox fills in. If it says glab isn't signed in, run the command it shows, then press its refresh button.
+
+### Plane (Plane tickets)
+
+Whisker reads your tickets with a personal access token. It's stored only on this Mac, in Whisker's settings file, and left out when you export your settings unless you choose to include it.
+
+1. **Make a token.** In Plane, open your avatar › **Profile settings** › **Personal access tokens** › **Add personal access token** (on older Plane: **Workspace settings** › **API tokens**). Give it a name like "Whisker", pick an expiry, and copy the token (it starts with `plane_api_`). Plane shows it only once.
+2. **Find your workspace slug.** It's the first part of your Plane URLs: in `https://app.plane.so/my-team/projects/`, the slug is `my-team`.
+3. **Fill in Whisker.** In **Settings › Developer › Plane**:
+   - **Host**: `app.plane.so` for Plane Cloud, or your own Plane's address, for example `plane.example.com`.
+   - **Workspace**: the slug from step 2.
+   - **Project**: optional. A project's identifier (the letters in its ticket ids, like `WORK` in `WORK-42`) shows only that project. Leave it empty to see your tickets in every project you're a member of (up to 10).
+   - **API token**: paste the token from step 1.
+4. **Match your workflow.** **After opening an MR** and **After the MR merges** name the states Whisker offers to move a ticket to, such as `In Review` and `Ready for QA`. Leave them empty and Whisker picks a review state and your first done state.
+5. **Choose your notifications.** **Ticket moved** and **Mentions** are on to start with.
+
+The first load reads all your tickets and can take a little while; after that, Whisker only asks Plane for what changed, every two minutes.
+
+### Branches and merge requests from tickets
+
+To start branches and open merge requests from a ticket, Whisker also needs your checkout:
+
+1. In **Settings › Developer › Git**, press **Choose folder…** and pick your repository.
+2. Make sure `git push` works in that folder from Terminal (SSH key or saved credentials). Whisker pushes with your own git setup.
+
+### Notifications
+
+macOS asks once whether Whisker may send notifications. If you said no, turn them on in **System Settings › Notifications › Whisker**.
+
+### If something doesn't show
+
+- **A tile says it's offline:** the server didn't answer. Whisker keeps showing the last list and tries again on its own.
+- **Plane says "Token rejected":** the token expired or was deleted. Make a new one and paste it in.
+- **Plane says it refused access (403):** check the workspace slug, and that you're a member of that workspace.
+- **Mentions are a little late:** Plane has no mentions feed for tokens, so Whisker finds them by reading the newest comments on tickets that changed. They show within a couple of minutes.
 
 <br>
 
