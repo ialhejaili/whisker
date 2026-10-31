@@ -111,13 +111,16 @@ The GitLab **Review inbox** lists every merge request that needs you, most urgen
 
 Whisker watches GitLab and Plane for you and tells you what changed, so you never have to check. Click a notification to open the MR or ticket.
 
-| On your merge requests | On Plane |
-|---|---|
-| Pipeline failed, or passed after failing | Someone moved one of your tickets |
-| Someone approved it | Someone mentioned you on **any** ticket in your projects, in a comment or the description |
-| It's ready to merge, or has conflicts | |
-| A new comment or unresolved thread | |
-| Someone else merged or closed it | |
+**On your merge requests**
+- The pipeline failed, or passed after failing
+- Someone approved it
+- It's ready to merge, or has conflicts
+- A new comment or unresolved thread
+- Someone else merged or closed it
+
+**On Plane**
+- Someone moved one of your tickets
+- Someone mentioned you on **any** ticket in your projects, in a comment or the description
 
 Your own actions never notify you. Turn each kind on or off in **Settings › Developer**.
 
