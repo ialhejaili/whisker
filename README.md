@@ -109,7 +109,7 @@ The GitLab **Review inbox** lists every merge request that needs you, most urgen
 
 ## Notifications that keep you ahead
 
-Whisker watches GitLab and Plane for you and tells you what changed, so you never have to check. Click a notification to open the MR or ticket.
+Whisker watches GitLab and Plane for you and tells you what changed, so you never have to check. Click a notification to open the MR or ticket right on your desk.
 
 **On your merge requests**
 - The pipeline failed, or passed after failing
