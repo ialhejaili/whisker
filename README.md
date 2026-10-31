@@ -130,7 +130,7 @@ Your own actions never notify you. Turn each kind on or off in **Settings › De
 
 <table>
 <tr>
-<td width="40%" valign="top"><img src="screenshots/repo-stack.png" alt="Repo and dev stack widgets"></td>
+<td width="40%" valign="top"><img src="screenshots/repo.png" alt="The Repo widget"></td>
 <td valign="top">
 
 **Branches without the terminal.**
@@ -139,7 +139,13 @@ Your own actions never notify you. Turn each kind on or off in **Settings › De
 - Every branch's ticket and merge request
 - Clean up old worktrees in one go
 
-**Your dev environment, under one button.**
+</td>
+</tr>
+<tr>
+<td width="40%" valign="top"><img src="screenshots/stack.png" alt="The Dev stack widget"></td>
+<td valign="top">
+
+**Your local environment, under one button.**
 - **Start, stop and restart** your dev server, and read its log
 - **Docker Compose** up or down, with every container's health
 - **Restart a container** or read its logs, one at a time
