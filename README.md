@@ -24,7 +24,20 @@ See what needs you, act on it in one click, and get a notification the moment so
 
 ![The Whisker desk](screenshots/desk.jpg)
 
-<p align="center"><sub>Every screenshot uses made-up sample data from Whisker's demo mode.</sub></p>
+<table>
+<tr>
+<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-midnight.jpg" alt="Midnight theme"></a></td>
+<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-matcha.jpg" alt="Matcha theme"></a></td>
+<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-lavender.jpg" alt="Lavender theme"></a></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Midnight</b></sub></td>
+<td align="center"><sub><b>Matcha</b></sub></td>
+<td align="center"><sub><b>Lavender</b></sub></td>
+</tr>
+</table>
+
+<p align="center"><sub>Five themes, or your own colour. Every screenshot uses made-up sample data from Whisker's demo mode.</sub></p>
 
 <br>
 
