@@ -26,9 +26,9 @@ See what needs you, act on it in one click, and get a notification the moment so
 
 <table>
 <tr>
-<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-midnight.jpg" alt="Midnight theme"></a></td>
-<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-matcha.jpg" alt="Matcha theme"></a></td>
-<td width="33%"><a href="#pick-your-look"><img src="screenshots/theme-lavender.jpg" alt="Lavender theme"></a></td>
+<td width="33%"><img src="screenshots/theme-midnight.jpg" alt="Midnight theme"></td>
+<td width="33%"><img src="screenshots/theme-matcha.jpg" alt="Matcha theme"></td>
+<td width="33%"><img src="screenshots/theme-lavender.jpg" alt="Lavender theme"></td>
 </tr>
 <tr>
 <td align="center"><sub><b>Midnight</b></sub></td>
@@ -162,23 +162,6 @@ Your own actions never notify you. Turn each kind on or off in **Settings › De
 2. **Start the branch** (or a worktree), named after the ticket.
 3. **Open the merge request.** Title and description come from the ticket and your commits. Whisker pushes the branch and offers to move the ticket to review.
 4. **Merge** from the Review inbox, and Whisker offers the ticket's next state.
-
-<br>
-
-## Pick your look
-
-Five themes, or your own accent colour. Sakura is the pink one at the top; here are three more.
-
-![Midnight theme](screenshots/theme-midnight.jpg)
-<p align="center"><sub><b>Midnight</b></sub></p>
-
-![Matcha theme](screenshots/theme-matcha.jpg)
-<p align="center"><sub><b>Matcha</b></sub></p>
-
-![Lavender theme](screenshots/theme-lavender.jpg)
-<p align="center"><sub><b>Lavender</b></sub></p>
-
-Plus **Tabby**; mixed, all-dark or all-light tiles; and a matching background or your own wallpaper.
 
 <br>
 
