@@ -59,6 +59,7 @@ approve a merge request or open a ticket without leaving the desk.
 **Made for the Mac**
 
 - Lives on the desktop, behind your windows
+- Or add single widgets next to your own
 - <kbd>⌥ Space</kbd> brings it to the front
 - A menu-bar cat lists what needs you
 - Five themes, or your own colour
@@ -92,7 +93,29 @@ You choose which states those are in **Settings › Developer**, to match your t
 
 <br>
 
-## Widgets
+## Widgets for your Mac's desktop
+
+Want just one or two? Whisker's widgets are in the macOS widget gallery too, so you can place them next to your own. Right-click the desktop, choose **Edit Widgets…** and search for Whisker.
+
+![Whisker widgets in the macOS widget gallery](screenshots/mac-widgets.png)
+
+**Up next**, **Prayer times**, **Needs you**, **Agenda**, **To-do**, **Plane tickets**, **Review inbox** and **Cat of the hour**, in the sizes macOS offers. They follow your theme, countdowns tick live, and a click opens the ticket, the merge request, the meeting or Whisker itself. Whisker needs to be running to keep them up to date.
+
+<br>
+
+## Keyboard
+
+| Keys | From any app |
+|---|---|
+| <kbd>⌥ Space</kbd> | Show or hide the desk |
+| <kbd>⌥ ⇧ Space</kbd> | Today: everything that needs you |
+| <kbd>⌃ ⌥ H</kbd> | Hide or show the widgets |
+
+On the desk: <kbd>T</kbd> Today, <kbd>A</kbd> arrange tiles, <kbd>?</kbd> every shortcut, <kbd>Esc</kbd> back. Pick another desk shortcut in **Settings › Look**.
+
+<br>
+
+## Widgets on the desk
 
 Turn widgets on or off and reorder them in **Settings › Widgets**, or drag them into place with **Arrange Tiles** in the menu-bar cat.
 
@@ -172,6 +195,7 @@ Also available: **Clock & greeting**, **Focus timer**, **Habits**, **Sticky note
 - A matching background with wandering paw prints, or your own wallpaper
 - How many rows of tiles, and which display
 - A shortcut or hot corner to bring the desk forward
+- Cover your desktop files with the background, or keep them in view
 - Export your settings to another Mac
 
 <br clear="right">
