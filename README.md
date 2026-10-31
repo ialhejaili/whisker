@@ -149,7 +149,7 @@ Your own actions never notify you. Turn each kind on or off in **Settings › De
 
 <br>
 
-## From ticket to merged
+## From ticket to MR
 
 <table>
 <tr>
