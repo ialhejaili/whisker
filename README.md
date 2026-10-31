@@ -206,21 +206,22 @@ On the desk: <kbd>T</kbd> Today, <kbd>A</kbd> arrange tiles, <kbd>?</kbd> every 
 
 ## Get started
 
+### Install
+
 1. **[Download Whisker](https://github.com/ialhejaili/whisker/releases/download/v0.4.2/Whisker-0.4.2.dmg)**, open it, and drag Whisker into **Applications**.
 2. **Open Whisker.** Settings opens on first launch: pick a theme and your city.
 3. **Allow what you want.** macOS asks once each for Location, Calendar, Reminders and notifications.
 
-Then turn on **Open at Login** in the menu-bar cat. Connect your tools below; each takes about two minutes.
+Then turn on **Open at Login** in the menu-bar cat, and connect your tools below. Each takes about two minutes.
 
-<br>
 
-## Connect your tools
+### Connect your tools
 
 Everything is in **Settings › Developer** (open Settings from the menu-bar cat).
 
 **First:** Apple's Command Line Tools (`xcode-select --install`) and [Homebrew](https://brew.sh).
 
-### GitLab
+#### GitLab
 
 Whisker uses the official GitLab CLI and its sign-in, so it never sees your GitLab token.
 
@@ -231,7 +232,7 @@ Whisker uses the official GitLab CLI and its sign-in, so it never sees your GitL
 3. Check it: `glab auth status`
 4. In **Settings › Developer › GitLab**, fill in **Host** (like `gitlab.example.com`) and your **Username**.
 
-### Plane
+#### Plane
 
 1. Make a token in Plane › avatar › **Profile settings** › **Personal access tokens** (older Plane: **Workspace settings** › **API tokens**). Copy it; Plane shows it once.
 2. In **Settings › Developer › Plane**, fill in:
@@ -241,14 +242,14 @@ Whisker uses the official GitLab CLI and its sign-in, so it never sees your GitL
    - **API token**: the token from step 1. It's stored only on this Mac.
 3. Optional: **After opening an MR** and **After the MR merges** name the states Whisker offers, like `In Review` and `Ready for QA`.
 
-### Your repo and local stack
+#### Your repo and local stack
 
 1. In **Git**, press **Choose folder…** and pick your checkout. Make sure `git push` works there from Terminal; Whisker uses your own git setup.
 2. In **Dev server**, add the start command (like `pnpm dev`) and its URL.
 3. Turn on **Docker Compose** if your project uses it.
 4. In **Checks**, add your one-click commands, like `pnpm db:migrate` or `pnpm test`.
 
-### Notifications
+#### Notifications
 
 Each kind has its own switch in **Settings › Developer**. If you said no when macOS asked, turn them on in **System Settings › Notifications › Whisker**.
 
