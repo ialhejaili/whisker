@@ -174,45 +174,33 @@ Your own actions never notify you. Turn each kind on or off in **Settings › De
 
 <br>
 
-## Your day, on the same desk
+## Your work in macOS widgets, too
 
-<table>
-<tr>
-<td width="22%" valign="top"><img src="screenshots/personal.png" alt="Cat photo, batteries and This Mac"></td>
-<td width="22%" valign="top"><img src="screenshots/day.png" alt="Agenda and to-do list"></td>
-<td valign="top">
+Prefer the widgets macOS already has? Every Whisker tile is also a native macOS widget, so you can keep just the ones you need on your desktop, next to your own: your tickets, your review inbox, your local stack.
 
-- **Agenda** from Apple Calendar, with one-click **Join** for Zoom, Meet and Teams
-- **To-do** you type naturally: `call the bank tomorrow !`
-- **Prayer times** with adhan, iqama and a countdown, for your city
-- **Batteries** for your mouse, keyboard and AirPods
-- **This Mac**: CPU, memory and disk
-- **Quick links** to the sites you open all day
-- **A cat photo** every hour, checked to really be a cat
+![Whisker widgets on the macOS desktop](screenshots/mac-widgets.png)
 
-Also: Clock, Focus timer, Habits, Sticky note, Apple Reminders, and Cat fact & dev tip.
+- **They act, not just show.** Approve and merge, retry a pipeline, move a ticket, start a branch, run a command or tick a to-do, right in the widget. A short note under it says how it went.
+- **Typing opens one panel.** A comment, a reply or a new ticket opens just that panel, floating over your windows, with everything the desk has.
+- **Click a header to see everything.** The whole desk comes up, with every item the widget had no room for.
+- **They blend in.** Small, medium and large sizes, your theme, and macOS's tinted desktop style.
+- **Always current.** Whisker updates them in the background and redraws one the moment you press its button.
 
-</td>
-</tr>
-</table>
+**Add one:** right-click your desktop, choose **Edit Widgets…**, search for Whisker and drag in the ones you want. Whisker needs to be running.
+
+**All 19:** Plane tickets, Review inbox, Needs you, Repo, Dev stack, Up next, Agenda, Prayer times, Clock, To-do, Reminders, Habits, Focus timer, Sticky note, Cat fact, Cat of the hour, Batteries, This Mac and Quick links.
 
 <br>
 
-## Or just the widgets you want
-
-Every tile is also a macOS widget. Right-click your desktop, choose **Edit Widgets…** and search for Whisker.
-
-![Whisker widgets in the macOS widget gallery](screenshots/mac-widgets.png)
-
-- **The same buttons as the desk:** approve, merge, move a ticket, start a branch, run a command
-- **Anything that needs typing** opens just that panel, floating over your windows
-- **Click a widget's header** to bring up the whole desk
+## Keyboard
 
 | Keys | From any app |
 |---|---|
 | <kbd>⌥ Space</kbd> | Show or hide the desk |
 | <kbd>⌥ ⇧ Space</kbd> | Today: everything that needs you |
 | <kbd>⌃ ⌥ H</kbd> | Hide or show the widgets |
+
+On the desk: <kbd>T</kbd> Today, <kbd>A</kbd> arrange tiles, <kbd>?</kbd> every shortcut, <kbd>Esc</kbd> back.
 
 <br>
 
