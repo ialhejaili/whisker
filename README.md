@@ -241,6 +241,7 @@ Whisker uses the official GitLab CLI and its sign-in, so it never sees your GitL
    - **Project** (optional): one project's identifier, like `WORK`. Leave it empty to see every project you're in.
    - **API token**: the token from step 1. It's stored only on this Mac.
 3. Optional: **After opening an MR** and **After the MR merges** name the states Whisker offers, like `In Review` and `Ready for QA`.
+4. Optional: Whisker sorts your tickets by your states' names. If your team's states are named differently, or not in English, list them in **Waiting states** (with someone else, like review or QA) and **Closed states** (ended without finishing), separated by commas.
 
 #### Your repo and local stack
 
